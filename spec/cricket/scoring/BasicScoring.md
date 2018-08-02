@@ -21,11 +21,16 @@ Then the Score Card and Total Runs Scored are accumulated as shown.
 
 | [enter][][Entry][entry] | [Score Card][card] | [Total Runs Scored][score] |
 | ---------------         | -------------      | ---------------            |
-| . | .      | 0  |
-| 1 | .1     | 1  |
-| 3 | .13    | 4  |
-| . | .13.   | 4  |
-| 6 | .13.6  | 10 |
+| .  | .      | 0  |
+| 1  | .1     | 1  |
+| 3  | .13    | 4  |
+| .  | .13.   | 4  |
+| 6  | .13.6  | 10 |
+| .  | .13.6. | 10 |
+| <- | .13.6  | 10 |
+| <- | .13.   | 4  |
+| 4  | .13.4  | 8  |
+
 
 [enter]: - "#result = enterScore(#entry)"
 [entry]: - "#entry"

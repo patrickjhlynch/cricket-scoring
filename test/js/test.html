@@ -41,6 +41,14 @@
     assert.equal(getScore(), 0);
   });
 
+  QUnit.test("removing a dot doesn't result in a NaN error", function( assert ) {
+    enter('.');
+    assert.equal(getScore(), 0);
+    assert.equal(getScorecard(), '.');
+    backspace();
+    assert.equal(getScore(), 0);
+  });
+
 
   function getScore() {
     return document.getElementById('score').innerHTML;

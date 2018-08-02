@@ -18,7 +18,9 @@ function enter(key) {
 */
 function backspace() {
     var previousBall = scorecard.charAt(scorecard.length - 1);
-    score = score - previousBall;
+    if (previousBall != '.'){
+        score = score - previousBall;
+    }
     scorecard = scorecard.substring(0, scorecard.length - 1); //Changed this to length-1
     document.getElementById('scorecard').innerHTML = scorecard;
     document.getElementById('score').innerHTML = score;
